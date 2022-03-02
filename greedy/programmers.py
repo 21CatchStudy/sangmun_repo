@@ -1,5 +1,26 @@
 https://programmers.co.kr/learn/courses/30/lessons/42862
 
+    *오류코드
+    def solution(n, lost, reserve):
+answer = n-len(lost)
+n = int(input())
+lost, reserve = map(int(input().split()))
+
+lost = []
+reserve = []
+lost, reserve.sort()
+for i in range() :
+     for j in range() :
+      lost, reserve.append()
+     j[reserve] = i[lost] - 1 #reserve 에서 lost로 넘겨
+       if j[reserve] == 0 :
+         i[lost] = j[reserve] + 1 #lost 에서 reserve로 넘겨
+    print(answer)
+
+    
+    
+    
+    *정답
 def solution(n, lost, reserve):
     reserve_only = set(reserve) - set(lost)
     # 2,4,1,3,5 외에 겹치는 수가 없이 set으로 선언 
