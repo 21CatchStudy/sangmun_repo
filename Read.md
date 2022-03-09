@@ -1,3 +1,4 @@
+**치킨배달**
 ***
 
 ```*POINT*
@@ -39,3 +40,54 @@ for k in c :
     result = min(result, min_result)
 print(result) 
 ```
+
+
+**뱀**
+***
+
+```
+import sys    
+from collections import deque
+input = sys.stdin.readline
+def changedir(cha):
+    if cha == "L":
+        if direction == [1, 0]:
+            return [0, 1]
+        elif direction == [-1, 0]:
+            return [0, -1]
+        elif direction == [0, 1]:
+            return [-1, 0]
+        elif direction == [0, -1]:
+            return [1, 0]
+    elif cha == "D":
+        if direction == [1, 0]:
+            return [0, -1]
+        elif direction == [-1, 0]:
+            return [0, 1]
+        elif direction == [0, 1]:
+            return [1, 0]
+        elif direction == [0, -1]:
+            return [-1, 0]
+    
+dy = [-1, 0, 1, 0]
+dx = [0, 1, 0, -1]
+     # 루트 L과 D의 선언을 통해   
+
+def check(x,y) :
+    if[x,y] in q :
+        return False
+    return True
+n = int(input())
+direction = 1
+time = 1 
+
+while True:
+        y, x = y + dy[direction], x + dx[direction]
+        return time
+
+
+L = int(input())
+    times = {}
+    for i in range(L):
+        X, C = input().split()
+        ```
