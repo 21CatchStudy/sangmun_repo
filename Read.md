@@ -1,4 +1,4 @@
-**치킨배달**
+* #치킨배달
 ***
 
 ```*POINT*
@@ -42,7 +42,7 @@ print(result)
 ```
 
 
-**뱀**
+* # 뱀
 *먼저 뱀은 몸길이를 늘려 머리를 다음칸에 위치시킨다. 뱀의 세부사항을 캐치하지못함
 *만약 이동한 칸에 사과가 있다면, 그 칸에 있던 사과가 없어지고 꼬리는 움직이지 않는다
 *만약 이동한 칸에 사과가 없다면, 몸길이를 줄여서 꼬리가 위치한 칸을 비워준다. 즉, 몸길이는 변하지 않는다.
@@ -96,50 +96,29 @@ L = int(input())
         ```
         
 **오답코드**
+첫째 줄 보드의 크기
+k 사과위치 l 이동경로
+ 행과 열의 범위 dx,dy로 선언을 하였다
+  문자열 이기때문에 타입변수를 주고 왼쪽 오른쪽으로 선언하였다
 ```
 n = int(input())
-# 첫째 줄 보드의 크기
+ 
 k,l = list(map(int,input().split))
-# k 사과위치 l 이동경로
+ 
 dx = [1,0,-1,0]
 dy = [-1,1,0,-1]
-# 행과 열의 범위 dx,dy로 선언을 하였다
+ 
 k = dx + dy
 move_types = ['L', 'D']
-# 문자열 이기때문에 타입변수를 주고 왼쪽 오른쪽으로 선언하였다
+ 
 x = int(0)
-# 정수 x를 int로 선언
+ 
 cnt = 0
 start = 0
 
 for go in (l) :
     while start > x : 
-        #게임이 계속 시작될 때
-     for i in(len(move_types)) :
-        for j in(int(x)) :
-            if x == 0 :
-                cnt += k
-                cnt = move_types + 1
-
-print(cnt)
-n = int(input())
-# 첫째 줄 보드의 크기
-k,l = list(map(int,input().split))
-# k 사과위치 l 이동경로
-dx = [1,0,-1,0]
-dy = [-1,1,0,-1]
-# 행과 열의 범위 dx,dy로 선언을 하였다
-k = dx + dy
-move_types = ['L', 'D']
-# 문자열 이기때문에 타입변수를 주고 왼쪽 오른쪽으로 선언하였다
-x = int(0)
-# 정수 x를 int로 선언
-cnt = 0
-start = 0
-
-for go in (l) :
-    while start > x : 
-        #게임이 계속 시작될 때
+        게임이 계속 시작될 때
      for i in(len(move_types)) :
         for j in(int(x)) :
             if x == 0 :
