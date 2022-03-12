@@ -8,9 +8,9 @@ n, m, v  = map(int,input().split())
 graph = [[0] * (n + 1) for _ in range(n + 1)]
 # N(4) + 1
 for _ in range(m):
-  m1, m2 = map(int, input().split())
+  a, b = map(int, input().split())
   # 노드 연결 하기
-  graph[m1][m2] = graph[m2][m1] = 1
+  graph[a][b] = graph[a][b] = 1
 #노드와 노드사이를 이어주기 위헤 필요한 코드값
 # https://jinyes-tistory.tistory.com/223 이 부분을 참고하여 
 
@@ -41,6 +41,7 @@ def bfs(graph, visited, v) :
                 visited[i] = True
 
 
-dfs(v)
+dfs(graph, v, visited)
 print()
-bfs(v)
+bfs(graph, v, visited)
+
