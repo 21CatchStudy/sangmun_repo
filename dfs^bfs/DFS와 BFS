@@ -1,0 +1,46 @@
+https://www.acmicpc.net/problem/1260        30분
+
+from collections import deque
+
+n, m, v  = map(int,input().split())
+
+
+graph = [[0] * (n + 1) for _ in range(n + 1)]
+# N(4) + 1
+for _ in range(m):
+  m1, m2 = map(int, input().split())
+  # 노드 연결 하기
+  graph[m1][m2] = graph[m2][m1] = 1
+#노드와 노드사이를 이어주기 위헤 필요한 코드값
+# https://jinyes-tistory.tistory.com/223 이 부분을 참고하여 
+
+visited = [False] * (n + 1)
+
+#dfs 
+def dfs(graph, visited, v) :
+    visited[v] = True
+    print(v, end= ' ') 
+    
+    for i in graph[v] :
+        if not visited[i] :
+            dfs(graph, i, visited)
+
+
+#bfs 
+def bfs(graph, visited_v) :
+    visited = [False] * (n + 1)
+    queue = deque([v])
+    visited[v] = True
+    while queue :
+        pop = queue.popleft()
+        print(pop, end = ' ')
+
+        for i in graph[pop] :
+            if not visited[i]:
+                queue.append(i)
+                visited[i] = True
+
+
+dfs(v)
+print()
+bfs(v)
