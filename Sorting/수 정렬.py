@@ -19,4 +19,4 @@ array = sorted(set(array))
 
 array = sorted(set(array))
 for i in array :
-    print(i)
+    print(i) 
