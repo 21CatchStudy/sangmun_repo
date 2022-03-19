@@ -1,3 +1,2 @@
-*.Jupyter Notebook linguist-detectable=false
-* linguist-vendored
-*.Python linguist-vendored=false
+demo/** linguist-documentation=false
+demo/**  linguist-vendored=false
