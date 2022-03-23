@@ -12,3 +12,4 @@ for i in range(n):
     if s[i] * (i + 1) > max_n:
         max_n = s[i] * (i + 1)
 print(max_n)
+ 
