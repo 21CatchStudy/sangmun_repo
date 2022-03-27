@@ -28,4 +28,4 @@ m_list = list(map(int,input().split()))
 
 #m_list안에서 n을 확인하는 코드
 for i in range(len(m_list())) : 
-    print(binary_search(m_list[i], sorted_list))
+    print(binary_search(m_list[i], sorted_list)) 
