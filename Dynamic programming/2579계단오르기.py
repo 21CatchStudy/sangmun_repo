@@ -17,7 +17,7 @@ d[0] = n_list[0]
 d[1] = max(n_list[0],n_list[1])
 d[i] = max(d[i - 1])    
 
-print(d[ n - 1])"""
+print(d[ n - 1])
 
 ---------------------------------------------
 
@@ -27,7 +27,7 @@ print(d[ n - 1])"""
 # 마지막 무조건 도착
 
 
-"""n = int(input())
+n = int(input())
 stairs = [0] * (n + 1)
 d = [0] * (n + 1)
 
@@ -52,4 +52,4 @@ else:
     for i in range(4, n+1):
         d[i] = max(d[i-3] + stairs[i] + stairs[i-1], d[i-2] + stairs[i])
 
-    print(d)"
+    print(d)
