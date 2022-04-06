@@ -1,5 +1,6 @@
 # 구현 - 시각:문제 조건
 
+*오류코드
 
 n = int(input())
 
@@ -20,7 +21,8 @@ result = 0
             result = i
             
     print(result)
-
+    
+*모범답안    
     
     # H를 입력받기
 h = int(input())
